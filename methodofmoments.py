@@ -21,7 +21,7 @@ def methodofmoments(x):
 def main():
     x=sample(10,0.5)
     print('10 points. MLE:  %f and Mom: %f' % (MLE(x), methodofmoments(x)) )
-    x=sample(1000,0.5)
+    x=sample(100,0.5)
     print('100 points. MLE:  %f and Mom: %f' % (MLE(x), methodofmoments(x)) )
     x=sample(1000,0.5)
     print('1000 points. MLE:  %f and Mom: %f' % (MLE(x), methodofmoments(x)) )
