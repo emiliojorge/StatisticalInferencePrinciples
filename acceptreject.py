@@ -8,7 +8,9 @@ import numpy as np
 
 
 def quotient(y):
+    #pdf for normally distributed with mu=0 and sigma=1
     fY = 1/math.sqrt(2 * math.pi) * math.e**( -(y**2 / 2) )
+    #pdf for gamma
     fV = 1/(math.sqrt(2) * math.pi) * 1 / ( 1 + y**2 / 2 )
     return fY/fV
 def generateNormal(n,i):
@@ -17,6 +19,7 @@ def generateNormal(n,i):
 
     while counter < n:
         U=random.random() # (0,1) uniform
+        #generates gamma rv using inverse pdf
         V=math.sqrt(2)*math.tan( math.pi * (random.random()-1/2) )
     
         if U<1/math.sqrt(math.pi) * quotient(V):
